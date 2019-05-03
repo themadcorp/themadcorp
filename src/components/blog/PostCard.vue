@@ -121,10 +121,6 @@ h2 small.post-desc {
   margin-top: 320px;
 }
 
-a:hover {
-  text-decoration: none;
-}
-
 .date {
   position: absolute;
   bottom: 15px;

@@ -43,13 +43,25 @@ export default {
   },
   mounted() {
     const nav = document.getElementById('navbar');
+    const menuToggle = document.getElementById('menuToggle');
     let parent =  document.getElementById('parallax-container');
     let children = parent.getElementsByTagName('div');
+    let menuBars = menuToggle.getElementsByTagName('span');
     
     // for controlling navbar transparency 
     window.onscroll = () => {
-      if(window.pageYOffset <= 100) nav.className = 'navbar sticky-top navbar-dark bg-transparent navbar-expand-lg';
-      else nav.className = 'navbar sticky-top navbar-light bg-light navbar-expand-lg scroll';
+      if(window.pageYOffset <= 100) {
+        nav.className = 'navbar sticky-top navbar-dark bg-transparent navbar-expand-lg';
+        for(let i = 0; i < menuBars.length; i++) {
+          menuBars[i].className = "";
+        }
+      }
+      else {
+        nav.className = 'navbar sticky-top navbar-light bg-light navbar-expand-lg scroll';
+        for(let i = 0; i < menuBars.length; i++) {
+          menuBars[i].className = "dark";
+        }
+      }
     }
 
     // for controlling the parallax effect
@@ -64,6 +76,9 @@ export default {
 </script>
 
 <style>
+a:hover {
+  text-decoration: none;
+}
 
 nav.bg-transparent {
   transition-duration: 400ms;

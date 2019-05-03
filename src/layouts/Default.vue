@@ -3,27 +3,27 @@
 
     <b-navbar toggleable="lg" :type="navType" :variant="navBg" sticky id="navbar">
       <b-navbar-brand to="/">The MAD Corp.</b-navbar-brand>
-
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-      <b-collapse id="nav-collapse" is-nav>
+      <b-collapse is-nav>
         <b-navbar-nav>
           <b-nav-item to="/blog">Blog</b-nav-item>
           <b-nav-item to="/team">Team</b-nav-item>
           <b-nav-item to="/contact">Contact</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
+
+      <b-navbar-toggle class="d-lg-none" id="menuToggle" target="menu" >
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <li><g-link to="/">Home</g-link></li>
+          <li><g-link to="/blog">Blog  </g-link></li>
+          <li><g-link to="/team">Team</g-link></li>
+          <li><g-link to="/contact">Contact</g-link></li>
+        </ul>
+      </b-navbar-toggle>
     </b-navbar>
-    
-    <!-- <header class="header">
-      <div class="header__left">
-        <GoBack v-if="showGoBack" /> 
-      </div>
-      
-      <div class="header__right">        
-        <ToggleTheme />
-      </div>
-    </header> -->
 
     <main class="main">
       <slot />
@@ -43,7 +43,6 @@
 export default {
   props: ['navBg', 'navType'],
   components: {
-    
   }
 }
 </script>
@@ -104,5 +103,100 @@ button:focus {
   a {
     color: currentColor;
   }
+}
+
+#menuToggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: flex;
+  width: 30px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span
+{
+  display: flex;
+  width: 30px;
+  height: 3px;
+  margin-bottom: 6px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 0px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span.dark {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(0px, -1px);
+  background: #36383F;
+}
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0px, 2px);
+}
+
+#menu
+{
+  position: fixed;
+  width: 350px;
+  height: 105vh;
+  box-shadow: 0 0 10px #85888C;
+  margin: -50px 0 0 -260px;
+  padding: 50px;
+  padding-top: 125px;
+  background-color: #F5F6FA;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 20px 0;
+  transition-delay: 2s;
+  text-align: center;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
 }
 </style>
