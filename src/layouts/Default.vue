@@ -1,6 +1,7 @@
 <template>
   <div id="app">
 
+    <!-- Navbar -->
     <b-navbar toggleable="lg" :type="navType" :variant="navBg" sticky id="navbar">
       <b-navbar-brand to="/">The MAD Corp.</b-navbar-brand>
       <b-collapse id="collapseNav" is-nav>
@@ -25,10 +26,12 @@
       </b-navbar-toggle>
     </b-navbar>
 
+    <!-- Main Container -->
     <main class="main">
       <slot />
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
       <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. </span>
       <span class="footer__links">Powered by <a href="http://www.themadcorp.com"> The MAD Corp </a></span>
@@ -178,7 +181,6 @@ button:focus {
   transform: none;
 }
 
-
 .main {
   padding: 0;
 }
@@ -196,6 +198,7 @@ button:focus {
   padding: calc(var(--space) / 2);
   text-align: center;
   font-size: .8em;
+  background-color:rgb(226, 226, 226);
 
   > span {
     margin: 0 .35em;

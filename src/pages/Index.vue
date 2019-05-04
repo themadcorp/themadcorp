@@ -17,18 +17,7 @@
         <br>
 
         <!-- About section -->
-        <h2>About</h2>
-        <p>
-          We're are an Innovation & Technology Company. Driven by the idea of conquering the world, 
-          we intend to change the world in a better way through Technology & Science.
-          The MAD Corp. has been established with the motive of delivering the most Creative 
-          and Eminent Innovations to all the inhabitants of this planet. <br>
-        </p>
-        <p>
-          We believe in <strong>Innovating Together</strong>!
-        </p>
-
-        <!-- Team Section -->
+        <About></About>
 
       </b-container>
     </div>
@@ -36,8 +25,11 @@
 </template>
 
 <script>
+import About from '~/components/home/About.vue'
 export default {
-  components: {},
+  components: {
+    About
+  },
   metaInfo: {
     title: "Home"
   },
@@ -121,7 +113,7 @@ nav.bg-light {
 
   #content {
     margin-top: -680px;
-    padding-top: 50px;
+    padding-top: 90px;
   }
 }
 
@@ -146,7 +138,7 @@ nav.bg-light {
   background-image: url('./../assets/images/parallax/rocket.png');
 }
 
-#content h1.hero {
+.container h1.hero {
   text-align: center;
   font-family: Montserrat, 'sans-serif';
   font-size: 48px;
@@ -155,21 +147,21 @@ nav.bg-light {
   margin-bottom: 0.3em;
 }
 
-#content p {
+.container p {
   line-height: 1.8em;
 }
 
-#content p.hero {
+.container p.hero {
   text-align: center;
   font-size: 18px;
   font-family: Montserrat, 'sans-serif';
 }
 
-#content .container {
+.container .container {
   padding: 10px 30px ;
 }
 
-#content h2 {
+.container h2 {
   font-family: Montserrat, 'sans-serif';
   font-weight: 500;
 }
