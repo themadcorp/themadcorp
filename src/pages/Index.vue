@@ -53,13 +53,13 @@ export default {
       if(window.pageYOffset <= 100) {
         nav.className = 'navbar sticky-top navbar-dark bg-transparent navbar-expand-lg';
         for(let i = 0; i < menuBars.length; i++) {
-          menuBars[i].className = "";
+          menuBars[i].className = "dark";
         }
       }
       else {
         nav.className = 'navbar sticky-top navbar-light bg-light navbar-expand-lg scroll';
         for(let i = 0; i < menuBars.length; i++) {
-          menuBars[i].className = "dark";
+          menuBars[i].className = "light";
         }
       }
     }
