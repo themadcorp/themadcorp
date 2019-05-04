@@ -118,24 +118,24 @@ nav.bg-light {
 }
 
 #parallax-0 {
-  background-image: url('./../assets/images/parallax/background.png');
+  background-image: url('./../assets/images/parallax/background.svg');
   position: absolute !important;
 }
 
 #parallax-1 {
-  background-image: url('./../assets/images/parallax/stars.png');
+  background-image: url('./../assets/images/parallax/stars.svg');
 }
 
 #parallax-2 {
-  background-image: url('./../assets/images/parallax/pink-smoke.png');
+  background-image: url('./../assets/images/parallax/pink-smoke.svg');
 }
 
 #parallax-3 {
-  background-image: url('./../assets/images/parallax/white-smoke.png');
+  background-image: url('./../assets/images/parallax/white-smoke.svg');
 }
 
 #parallax-4 {
-  background-image: url('./../assets/images/parallax/rocket.png');
+  background-image: url('./../assets/images/parallax/rocket.svg');
 }
 
 .container h1.hero {
