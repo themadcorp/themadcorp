@@ -74,7 +74,7 @@ a:hover {
 
 nav.bg-transparent {
   transition-duration: 400ms;
-  background: rgba(0, 0, 0, 0.16) !important;
+  background: rgba(0, 0, 0, 0.20) !important;
 }
 
 nav.bg-light {
