@@ -42,7 +42,7 @@ export default {
     
     // for controlling navbar transparency 
     window.onscroll = () => {
-      if(window.pageYOffset <= 100) {
+      if(window.pageYOffset <= 130) {
         nav.className = 'navbar sticky-top navbar-dark bg-transparent navbar-expand-lg';
         for(let i = 0; i < menuBars.length; i++) {
           menuBars[i].className = "dark";
