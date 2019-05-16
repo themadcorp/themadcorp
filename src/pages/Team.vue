@@ -87,15 +87,6 @@ export default {
   text-align: justify !important;
 }
 
-.container h1.hero {
-  text-align: center;
-  font-family: Montserrat, 'sans-serif';
-  font-size: 48px;
-  font-weight: 400;
-  letter-spacing: 10px;
-  margin-bottom: 0.3em;
-}
-
 .container p {
   line-height: 1.8em;
 }

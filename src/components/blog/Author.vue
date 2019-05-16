@@ -57,6 +57,7 @@ export default {
 		font-family: Montserrat;
 		font-weight: 400;
 		letter-spacing: 5px;
+		padding: 0 20px;
 	}
 
 	&__links {

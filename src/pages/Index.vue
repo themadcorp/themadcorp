@@ -157,7 +157,7 @@ nav.bg-light {
   font-family: Montserrat, 'sans-serif';
 }
 
-.container .container {
+.container {
   padding: 10px 30px ;
 }
 
