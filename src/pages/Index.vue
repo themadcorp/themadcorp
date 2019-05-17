@@ -31,7 +31,7 @@ export default {
     About
   },
   metaInfo: {
-    title: "Home"
+    title: "Home",
   },
   mounted() {
     const nav = document.getElementById('navbar');
@@ -39,6 +39,8 @@ export default {
     let parent =  document.getElementById('parallax-container');
     let children = parent.getElementsByTagName('div');
     let menuBars = menuToggle.getElementsByTagName('span');
+    let metaThemeColor = document.querySelector('meta[name=theme-color]');
+    metaThemeColor.setAttribute('content', '#561E8A');
     
     // for controlling navbar transparency 
     window.onscroll = () => {
@@ -47,12 +49,14 @@ export default {
         for(let i = 0; i < menuBars.length; i++) {
           menuBars[i].className = "dark";
         }
+        metaThemeColor.setAttribute('content', '#561E8A');
       }
       else {
         nav.className = 'navbar sticky-top navbar-light bg-light navbar-expand-lg scroll';
         for(let i = 0; i < menuBars.length; i++) {
           menuBars[i].className = "light";
         }
+        metaThemeColor.setAttribute('content', '#F8F9FA');
       }
     }
 
@@ -68,9 +72,6 @@ export default {
 </script>
 
 <style>
-a:hover {
-  text-decoration: none;
-}
 
 nav.bg-transparent {
   transition-duration: 400ms;

@@ -2,6 +2,7 @@
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import firebase from 'firebase/app'
 
 // Import main css
 import '~/assets/style/index.scss'
@@ -12,6 +13,17 @@ import DefaultLayout from '~/layouts/Default.vue'
 require('typeface-montserrat')
 require('typeface-noto-sans')
 
+// Initialize Firebase
+let firebaseConfig = {
+  apiKey: "AIzaSyD4Qfgxz6KKDBYbuynB8Wj-2FJA1sjCeOk",
+  authDomain: "the-mad-corp.firebaseapp.com",
+  databaseURL: "https://the-mad-corp.firebaseio.com",
+  projectId: "the-mad-corp",
+  storageBucket: "the-mad-corp.appspot.com",
+  messagingSenderId: "70562654966"
+};
+firebase.initializeApp(firebaseConfig);
+
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function (Vue, { router, head, isClient }) {
   
@@ -19,5 +31,10 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', DefaultLayout)
 
   Vue.use(BootstrapVue)
-  
+
+  // Add a meta tag
+  head.meta.push({
+    name: 'theme-color',
+    content: '#561E8A'
+  })
 }

@@ -44,9 +44,7 @@
 
 export default {
   props: ['navBg', 'navType'],
-  components: {
-    
-  }
+  components: {}
 }
 </script>
 
@@ -80,6 +78,10 @@ export default {
 
 button:focus {
     outline: none;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 #menuToggle {
