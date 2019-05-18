@@ -12,11 +12,11 @@
       <b-form @submit="onSubmit" v-if="showForm">
         <div class="form-row">
 
-          <b-form-group class="col-md-6" >
+          <b-form-group class="col-md-6" label="Name" label-for="name-input">
             <b-form-input
               type="text"
               class="form-control"
-              id="name"
+              id="name-input"
               placeholder="Name"
               v-model="form.name"
               v-model.trim="$v.form.name.$model"
@@ -27,11 +27,11 @@
           </b-form-group>
 
 
-          <b-form-group class="col-md-6" >
+          <b-form-group class="col-md-6" label="Email" label-for="email-input">
             <b-form-input
               type="email"
               class="form-control"
-              id="email"
+              id="email-input"
               placeholder="Email"
               v-model="form.email"
               v-model.trim="$v.form.email.$model"
@@ -42,10 +42,10 @@
           </b-form-group>
         </div>
 
-        <b-form-group>
+        <b-form-group label="Message" label-for="message-input">
           <b-form-textarea
             class="textarea"
-            id="message"
+            id="message-input"
             placeholder="Message"
             rows="3"
             max-rows="6"
