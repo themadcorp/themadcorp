@@ -14,13 +14,13 @@ require('typeface-montserrat')
 require('typeface-noto-sans')
 
 // Initialize Firebase
-let firebaseConfig = {
-  apiKey: "AIzaSyD4Qfgxz6KKDBYbuynB8Wj-2FJA1sjCeOk",
-  authDomain: "the-mad-corp.firebaseapp.com",
-  databaseURL: "https://the-mad-corp.firebaseio.com",
-  projectId: "the-mad-corp",
-  storageBucket: "the-mad-corp.appspot.com",
-  messagingSenderId: "70562654966"
+let config = {
+  apiKey: "API_KEY",
+  authDomain: "PROJECT_ID.firebaseapp.com",
+  databaseURL: "https://PROJECT_ID.firebaseio.com",
+  projectId: "PROJECT_ID",
+  storageBucket: "PROJECT_ID.appspot.com",
+  messagingSenderId: "MESSAGING_SEND_ID"
 };
 firebase.initializeApp(firebaseConfig);
 
